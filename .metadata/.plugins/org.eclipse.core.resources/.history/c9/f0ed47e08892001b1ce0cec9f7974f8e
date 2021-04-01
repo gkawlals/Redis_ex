@@ -1,0 +1,33 @@
+package poly.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import poly.dto.MovieDTO;
+import poly.persistance.mapper.IMovieMapper;
+import poly.service.IMovieRankService;
+import poly.service.IMovieService;
+
+
+@Service("MovieRankService")
+public class MovieRankServie implements IMovieRankService{
+	
+	@Resource(name = "MovieService")
+	private IMovieService movieService;
+	
+	@Resource(name="MovieMapper")
+	private IMovieMapper movieMapper;
+	
+	@Resource(name="RedisMovieMapper")
+	private IRedisMovieMapper redisMovieMapper;
+
+	@Override
+	public List<MovieDTO> getMovieRank(MovieDTO pDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

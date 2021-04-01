@@ -1,0 +1,9 @@
+package poly.service.impl;
+
+import org.springframework.stereotype.Service;
+
+
+@Service("MovieRankService")
+public class MovieRankServie implements IMovieRankService{
+
+}

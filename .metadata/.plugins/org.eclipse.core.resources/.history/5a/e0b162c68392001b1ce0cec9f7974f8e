@@ -1,0 +1,45 @@
+package poly.persistance.redis.impl;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.stereotype.Component;
+
+@Component("RedisMovieMapper")
+public class RedisMovieMapper implements RedisMovieMapper{
+	
+	@Autowired
+	public RedisTemplate<String, Object> redisDB;
+	
+	private Logger log = Logger.getLogger(this.getClass());
+	
+	/*
+	 * 영화순위 정보가 존재하는지 체크 
+	 * */
+	
+	@Override
+	public boolean getExists(String key) throws Exception {
+		
+		log.info(this.getClass().getName() + " .getExists Start!");
+		
+		
+		
+		log.info(this.getClass().getName() + " .getExists End!");
+		
+		return redisDB.hasKey(key);
+	}
+	
+	@Override
+	public List<MovieDto> getMovieRank(String key) throws Exception {
+		log.info(this.getClass().getName() + ".getMovieRank Start!");
+		
+		List<MovieDto> rList = null; // redisDB로부터 조회된 데이터를 저장할 객체 
+		
+		redisDB.setKeySerializer(new StringRedisSerializer());
+		
+	}
+
+}

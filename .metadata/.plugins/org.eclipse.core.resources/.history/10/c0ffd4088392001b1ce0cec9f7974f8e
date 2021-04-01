@@ -1,0 +1,5 @@
+package poly.persistance.redis.impl;
+
+public class RedisMovieMapper {
+
+}

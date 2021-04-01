@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+/Users/hamjimin/Desktop/Redis_Spring1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2145274842.index
+/Spring_MVC/src
+/Users/hamjimin/Desktop/Redis_Spring1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2356067830.index
+/Spring_MVC/src
+/Users/hamjimin/Desktop/Redis_Spring1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2307162970.index
+/Spring_MVC/src

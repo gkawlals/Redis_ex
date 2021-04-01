@@ -1,0 +1,20 @@
+package poly.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import poly.dto.MovieDTO;
+import poly.service.IMovieRankService;
+
+
+@Service("MovieRankService")
+public class MovieRankServie implements IMovieRankService{
+
+	@Override
+	public List<MovieDTO> getMovieRank(MovieDTO pDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
