@@ -25,6 +25,12 @@
 	</repositories>
 
 	<dependencies>
+		<!-- 웹크롤링을 위해 jsoup을 외부라이브러리에 추가 -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.12.1</version>
+		</dependency>
 	
 		<!-- ajax -->
 		<dependency>

@@ -43,15 +43,17 @@ public class MovieController {
 		//음성명령 
 		String send_msg = CmmUtil.nvl(request.getParameter("send_msg"));
 		
-		if(((send_msg.indexOf("영화") > -1) || (send_msg.indexOf("영하") > -1) || (send_msg.indexOf("연하") > -1) 
-				|| (send_msg.indexOf("연화") > -1)) && 
-						((send_msg.indexOf("순위") > -1) || (send_msg.indexOf("순이") > -1))) {
+		if(((send_msg.indexOf("movie") > -1) || (send_msg.indexOf("영하") > -1) || (send_msg.indexOf("연하") > -1) 
+				|| (send_msg.indexOf("연화") > -1)) ||(send_msg.indexOf("영화") > -1) && 
+						((send_msg.indexOf("순위") > -1) || (send_msg.indexOf("순이") > -1) || (send_msg.indexOf("rank") > -1)
+						|| (send_msg.indexOf("length") > -1))) {
 			
 			MovieDTO pDTO = new MovieDTO();
 			
 			pDTO.setRank_ck_time(DateUtil.getDateTime("yyyyMMdd"));
 			
 			rList = movieRankService.getMovieRank(pDTO);
+			
 			
 			if(rList == null ) {
 				

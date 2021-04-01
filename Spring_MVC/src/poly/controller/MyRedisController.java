@@ -49,18 +49,18 @@ public class MyRedisController {
 			return "success";
 		}
 		
-		@RequestMapping(value="myRedis/test03")
-		@ResponseBody
-		public String test03(HttpServletRequest request, HttpServletResponse response) throws Exception{
-			
-			log.info(this.getClass().getName() + " .doSaveDataforListJSON start !");
-			
-			myRedisService.doSaveDataforListJSON();
-			
-			log.info(this.getClass().getName() + " .doSaveDataforListJSON end !");
-			
-			return "success";
-		}
+//		@RequestMapping(value="myRedis/test03")
+//		@ResponseBody
+///		public String test03(HttpServletRequest request, HttpServletResponse response) throws Exception{
+///			
+///			log.info(this.getClass().getName() + " .doSaveDataforListJSON start !");
+//			
+///			myRedisService.doSaveDataforListJSON();
+///			
+//		log.info(this.getClass().getName() + " .doSaveDataforListJSON end !");
+//			
+///			return "success";
+	//	}
 	
 
 }

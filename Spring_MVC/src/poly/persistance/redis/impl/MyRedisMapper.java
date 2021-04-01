@@ -11,7 +11,6 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
-import poly.dto.MyJsonDTO;
 import poly.persistance.redis.IMyRedisMapper;
 import poly.util.CmmUtil;
 
@@ -100,74 +99,74 @@ public class MyRedisMapper implements IMyRedisMapper{
 		
 	}
 	
-	@Override
-	public void doSaveDataforListJSON() throws Exception {
-		log.info(this.getClass().getName() + ".getDoSaveData start!");
+	//@Override
+//	public void doSaveDataforListJSON() throws Exception {
+//		log.info(this.getClass().getName() + ".getDoSaveData start!");
+//		
+//		String redisKey = "Test02-List-JSON";
+///
+	//	/*
+	///	 * redis 저장 및 읽기에 대한 데이터 타입 지정 (String 타입으로 지정함 )
+		// * */
+//		
+//		redisDB.setKeySerializer(new StringRedisSerializer());//String 타입
+//		
+//		//  DTO를 JSON구조로 변경
+///		redisDB.setValueSerializer(new Jackson2JsonRedisSerializer<>(MyJsonDTO.class));
+//		
+//		MyJsonDTO pDTO = null;
+//		/*
+//		 * 2 데이터가 존재하면 바로 변환 
+//		 * */
+//		if(redisDB.hasKey(redisKey)) {
+//			//Redis에 저장된 데이터 전체 가져오기 
+//			// 데이터 인덱스는 0부터 시작하며, 세번째 인자값은 -1로 설정하면 모두 가져옴 
+//			List<String> pList = (List) redisDB.opsForList().range(redisKey, 0, -1);
+//			
+//			Iterator<String> it = pList.iterator();
+///			
+	//		while (it.hasNext()) {
+	///			
+		//		MyJsonDTO rDTO = (MyJsonDTO)it.next();
+		//		
+//				if(rDTO == null) {
+//					
+//					rDTO = new MyJsonDTO();
+//				}
+//				log.info(" name : " + CmmUtil.nvl(rDTO.getName()));
+//				log.info(" email : " + CmmUtil.nvl(rDTO.getEmail()));
+//				log.info(" addr : " + CmmUtil.nvl(rDTO.getAddr()));
+//			}
+//		} else {
+//			pDTO = new MyJsonDTO();
+//			
+//			pDTO.setName("함지민");
+//			pDTO.setEmail("함지민@gamil.com");
+//			pDTO.setAddr("서울시 강서구 ");
+//			
+//			redisDB.opsForList().rightPush(redisKey, pDTO);
+//			
+//			pDTO = null ;
+//			
+//			pDTO = new MyJsonDTO();
+//			
+//			pDTO.setName("이협건");
+//			pDTO.setEmail("이협건@gmail");
+//			pDTO.setAddr("서울시 강서구");
+///			
+	//		redisDB.opsForList().rightPush(redisKey, pDTO);
+	//		
+	//		pDTO = null;
+	//		
+	//		//저장되는 데이터의 유효기간(TTL)은 100분으로 정의
+	//		redisDB.expire(redisKey,100,TimeUnit.MINUTES);
+	//		
+	//		
+	//		log.info("Save Data!");
+	//	}
+	//	log.info(this.getClass().getName() + ".getDoSaveData end!");
 		
-		String redisKey = "Test02-List-JSON";
-
-		/*
-		 * redis 저장 및 읽기에 대한 데이터 타입 지정 (String 타입으로 지정함 )
-		 * */
-		
-		redisDB.setKeySerializer(new StringRedisSerializer());//String 타입
-		
-		//  DTO를 JSON구조로 변경
-		redisDB.setValueSerializer(new Jackson2JsonRedisSerializer<>(MyJsonDTO.class));
-		
-		MyJsonDTO pDTO = null;
-		/*
-		 * 2 데이터가 존재하면 바로 변환 
-		 * */
-		if(redisDB.hasKey(redisKey)) {
-			//Redis에 저장된 데이터 전체 가져오기 
-			// 데이터 인덱스는 0부터 시작하며, 세번째 인자값은 -1로 설정하면 모두 가져옴 
-			List<String> pList = (List) redisDB.opsForList().range(redisKey, 0, -1);
-			
-			Iterator<String> it = pList.iterator();
-			
-			while (it.hasNext()) {
-				
-				MyJsonDTO rDTO = (MyJsonDTO)it.next();
-				
-				if(rDTO == null) {
-					
-					rDTO = new MyJsonDTO();
-				}
-				log.info(" name : " + CmmUtil.nvl(rDTO.getName()));
-				log.info(" email : " + CmmUtil.nvl(rDTO.getEmail()));
-				log.info(" addr : " + CmmUtil.nvl(rDTO.getAddr()));
-			}
-		} else {
-			pDTO = new MyJsonDTO();
-			
-			pDTO.setName("함지민");
-			pDTO.setEmail("함지민@gamil.com");
-			pDTO.setAddr("서울시 강서구 ");
-			
-			redisDB.opsForList().rightPush(redisKey, pDTO);
-			
-			pDTO = null ;
-			
-			pDTO = new MyJsonDTO();
-			
-			pDTO.setName("이협건");
-			pDTO.setEmail("이협건@gmail");
-			pDTO.setAddr("서울시 강서구");
-			
-			redisDB.opsForList().rightPush(redisKey, pDTO);
-			
-			pDTO = null;
-			
-			//저장되는 데이터의 유효기간(TTL)은 100분으로 정의
-			redisDB.expire(redisKey,100,TimeUnit.MINUTES);
-			
-			
-			log.info("Save Data!");
-		}
-		log.info(this.getClass().getName() + ".getDoSaveData end!");
-		
-	}
+	//}
 
 	
 }

@@ -37,14 +37,15 @@ public class MyRedisService implements IMyRedisService{
 		
 	}
 
-	@Override
-	public void doSaveDataforListJSON() throws Exception {
-		log.info(this.getClass().getName() + ".doSaveDataforListJSON Start !");
-		
-		myRedisMapper.doSaveDataforListJSON();
-		
-		log.info(this.getClass().getName() + ".doSaveDataforListJSON End !");
-		
-	}
+
+//	@Override
+//	public void doSaveDataforListJSON() throws Exception {
+//		log.info(this.getClass().getName() + ".doSaveDataforListJSON Start !");
+//		
+//		myRedisMapper.doSaveDataforListJSON();
+//		
+//		log.info(this.getClass().getName() + ".doSaveDataforListJSON End !");
+//		
+//	}
 	
 }

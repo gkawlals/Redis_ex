@@ -7,6 +7,6 @@ public interface IMyRedisService {
 	
 	public void doSaveDataforList() throws Exception;
 	
-	public void doSaveDataforListJSON() throws Exception;
+	//public void doSaveDataforListJSON() throws Exception;
 	
 }

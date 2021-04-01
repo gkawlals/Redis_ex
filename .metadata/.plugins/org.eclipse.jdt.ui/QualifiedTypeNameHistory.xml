@@ -3,15 +3,19 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="javax.annotation.Resource"/>
     <fullyQualifiedTypeName name="poly.persistance.redis.IMyRedisMapper"/>
-    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
     <fullyQualifiedTypeName name="poly.service.IMyRedisService"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.JacksonJsonRedisSerializer"/>
     <fullyQualifiedTypeName name="poly.dto.MyJsonDTO"/>
-    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+    <fullyQualifiedTypeName name="poly.service.IMovieRankService"/>
+    <fullyQualifiedTypeName name="poly.dto.MovieDTO"/>
+    <fullyQualifiedTypeName name="poly.persistance.redis.IRedisMovieMapper"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="poly.util.CmmUtil"/>
+    <fullyQualifiedTypeName name="poly.util.DateUtil"/>
 </qualifiedTypeNameHistroy>
